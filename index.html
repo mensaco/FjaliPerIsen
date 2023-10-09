@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,33 +14,36 @@
     </style>
 
 </head>
+
 <body>
     <div x-data="App()" class="bg-slate-200 text-slate-700 h-screen">
-        <div class="md:w-11/12 lg:w-10/12 2xl:w-9/12 mx-auto bg-white h-full p-3" >
+        <div class="md:w-11/12 lg:w-10/12 2xl:w-9/12 mx-auto bg-white h-full p-3"
+            @click.stop="allUppercase = !allUppercase; allUppercase = !allUppercase; ">
             <div class="py-3">
                 <label>
-                    <input type="checkbox" x-model="allUppercase" class="h-[3.2vw] w-[3.2vw]"> &nbsp; <span class="text-[3.2vw]">vetëm shkronja të mëdha</span>
+                    <input type="checkbox" @click.stop="" x-model="allUppercase" class="h-[3.2vw] w-[3.2vw]"> &nbsp; <span
+                        class="text-[3.2vw]">vetëm shkronja të mëdha</span>
                 </label>
-                
-               
+
+
             </div>
-           
-    
+
+
             <div class="flex items-center gap-3">
-               
-                <div x-text="fjalia" @click.stop="allUppercase = !allUppercase; allUppercase = !allUppercase; " 
-                class="py-3 mt-[5rem] text-[5.0vw]" ></div>
-                
+
+                <div x-text="fjalia" class="py-3 mt-[5rem] text-[5.0vw]"></div>
+
             </div>
         </div>
-        
-       
+
+
     </div>
 </body>
- <!-- Alpine Plugins -->
- <script src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js" defer></script>
- <!-- Alpine Core -->
- <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
- 
- <script src="/js/index.js"></script>
+<!-- Alpine Plugins -->
+<script src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js" defer></script>
+<!-- Alpine Core -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+<script src="/js/index.js"></script>
+
 </html>
