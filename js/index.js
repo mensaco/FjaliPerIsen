@@ -3,8 +3,6 @@ window.App = () => {
     return {
         fjalite: Alpine.$persist([]),
         allUppercase: Alpine.$persist(false),
-        letterSize:Alpine.$persist(10),
-        dummy:false,
         async getfjalite() {
             const r = await fetch("/json/data.json")
             const j = await r.json()
