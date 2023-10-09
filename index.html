@@ -16,28 +16,19 @@
 <body>
     <div x-data="App()" class="bg-slate-200 text-slate-700 h-screen">
         <div class="md:w-11/12 lg:w-10/12 2xl:w-9/12 mx-auto bg-white h-full p-3" >
-            <div class="py-3 grid grid-cols-2 gap-3">
+            <div class="py-3">
                 <label>
-                    <input type="checkbox" x-model="allUppercase"> vetëm shkronja të mëdha
+                    <input type="checkbox" x-model="allUppercase" class="h-[3.2vw] w-[3.2vw]"> &nbsp; <span class="text-[3.2vw]">vetëm shkronja të mëdha</span>
                 </label>
                 
-                <label>madhësia e shkronjave
-                    <input type="range" min="10" max="100" step="1" x-model="letterSize"> 
-                </label>
+               
             </div>
            
     
             <div class="flex items-center gap-3">
-                <div class="py-3 mt-[5rem]">
-                    <div @click="allUppercase= !allUppercase;allUppercase= !allUppercase;" 
-                    class="p-1 text-slate-700 bg-slate-100 hover:bg-slate-300 text-2xl rounded-md min-h-10 min-w-10" :style="'height:'+(letterSize/10)+'rem; width:'+(letterSize/10)+'rem;'" >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-full h-full">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-                          </svg>
-                    </div>
-                </div>
+               
                 <div x-text="fjalia" @click.stop="allUppercase = !allUppercase; allUppercase = !allUppercase; " 
-                class="py-3 mt-[5rem]" :style="'font-size:'+(letterSize/10)+'rem'"></div>
+                class="py-3 mt-[5rem] text-[5.0vw]" ></div>
                 
             </div>
         </div>
