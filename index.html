@@ -18,8 +18,7 @@
 
 <body>
     <div x-data="App()" class="bg-slate-200 text-slate-700 h-screen">
-        <div class="md:w-11/12 lg:w-10/12 2xl:w-9/12 mx-auto bg-white h-full p-3"
-            >
+        <div class="md:w-11/12 lg:w-10/12 2xl:w-9/12 mx-auto bg-white h-full p-3">
             <div class="py-3 flex justify-between gap-3">
                 <label>
                     <input type="checkbox" x-model="allUppercase" class="h-[3.2vw] w-[3.2vw]"> &nbsp; <span
@@ -31,7 +30,7 @@
 
 
             <div class="flex items-center gap-3">                
-                <div x-text="fjalia" class="py-3 mt-[5rem] text-[5.0vw]"></div>
+                <div x-text="fjalia" class="py-3 mt-[5rem] text-[5.0vw]" @click.stop="changeFjalia"></div>
             </div>
         </div>
 

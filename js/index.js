@@ -15,15 +15,19 @@ window.App = () => {
                 this.reload()
             }
             const i = Math.floor(Math.random() * this.fjalite.length)
-            const fjalia = this.fjalite[i]
+            const fj = this.fjalite[i]
             if(this.allUppercase){
-                return fjalia.toUpperCase()
+                return fj.toUpperCase()
             }
-            return fjalia
+            return fj
         },
         f: this.getfjalite,
         async reload(){
             await this.getfjalite()
+        },
+        changeFjalia(){
+            this.allUppercase = !this.allUppercase
+            this.allUppercase = !this.allUppercase
         }
     }
 }
