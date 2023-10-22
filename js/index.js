@@ -12,7 +12,7 @@ window.App = () => {
         ,
         get fjalia() {
             if (this.fjalite.length == 0) {
-                this.getfjalite()
+                this.reload()
             }
             const i = Math.floor(Math.random() * this.fjalite.length)
             const fjalia = this.fjalite[i]
@@ -21,6 +21,9 @@ window.App = () => {
             }
             return fjalia
         },
-        f: this.getfjalite
+        f: this.getfjalite,
+        async reload(){
+            await this.getfjalite()
+        }
     }
 }
