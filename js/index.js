@@ -4,7 +4,7 @@ window.App = () => {
         fjalite: Alpine.$persist([]),
         allUppercase: Alpine.$persist(false),
         async getfjalite() {
-            const r = await fetch("/json/data.json")
+            const r = await fetch("/json/data.json?r="+Math.random())
             const j = await r.json()
             this.fjalite = j.l1
             return j.l1
