@@ -1,33 +1,39 @@
-
 window.App = () => {
     return {
+        
         fjalite: Alpine.$persist([]),
+
+        fjalia: Alpine.$persist(''),
+
+        get Fjalia() {
+            return this.allUppercase ? this.fjalia.toUpperCase() : this.fjalia
+        },
+
         allUppercase: Alpine.$persist(false),
+
         async getfjalite() {
-            const r = await fetch("/json/data.json?r="+Math.random())
+            const r = await fetch("/json/data.json?r=" + Math.random())
             const j = await r.json()
             this.fjalite = j.l1
             return j.l1
-        }
-        ,
-        get fjalia() {
+        },
+
+        get newfjalia() {
             if (this.fjalite.length == 0) {
                 this.reload()
             }
             const i = Math.floor(Math.random() * this.fjalite.length)
-            const fj = this.fjalite[i]
-            if(this.allUppercase){
-                return fj.toUpperCase()
-            }
-            return fj
+            this.fjalia = this.fjalite[i]
+            return this.fjalia
         },
-        f: this.getfjalite,
-        async reload(){
+
+        async reload() {
             await this.getfjalite()
+            this.changeFjalia()
         },
-        changeFjalia(){
-            this.allUppercase = !this.allUppercase
-            this.allUppercase = !this.allUppercase
+
+        changeFjalia() {
+            this.newfjalia
         }
     }
 }
