@@ -1,6 +1,6 @@
 window.App = () => {
     return {
-        
+
         fjalite: Alpine.$persist([]),
 
         fjalia: Alpine.$persist(''),
@@ -30,6 +30,7 @@ window.App = () => {
         async reload() {
             await this.getfjalite()
             this.changeFjalia()
+            this.newfjalia()
         },
 
         changeFjalia() {
