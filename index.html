@@ -23,9 +23,9 @@
         <div class="md:w-11/12 lg:w-10/12 2xl:w-9/12 mx-auto bg-slate-900 h-full p-3 relative">
             
             <div class="py-3 flex justify-start items-center">
-                <button class="text-2xl cursor-pointer ml-1 px-2 py-1" @click="allUppercase = true">A</button>
-                <button class="text-2xl cursor-pointer ml-1 px-2 py-1" @click="allUppercase = false">a</button>
-                <button class="text-2xl cursor-pointer ml-1 px-2 py-1" @click="reload">&#8635;</button>
+                <div class="text-2xl cursor-pointer ml-3 p-3 border border-slate-400 bg-slate-700 rounded-md" @click="allUppercase = true">A</div>
+                <div class="text-2xl cursor-pointer ml-3 p-3 border border-slate-400 bg-slate-700 rounded-md" @click="allUppercase = false">a</div>
+                <div class="text-2xl cursor-pointer ml-3 p-3 border border-slate-400 bg-slate-700 rounded-md" @click="reload">&#8635;</div>
             </div>
 
             <div class="mt-10">                
@@ -33,13 +33,13 @@
             </div>            
 
             <div class="absolute bottom-10 mt-[5rem] left-3 right-3">
-                <button class="text-2xl w-full p-3 border border-slate-400 bg-slate-700 rounded-md shadow" @click.stop="changeFjalia">ndërro fjalinë</button>
+                <div class="text-2xl text-center w-full p-3 border border-slate-400 bg-slate-700 rounded-md" @click.stop="changeFjalia">ndërro fjalinë</div>
             </div>
 
         </div>        
     </div>
-    <div x-model="newfjalia"></div>
-    <div x-model="reload"></div>
+    <!-- <div x-model="newfjalia"></div>
+    <div x-model="reload"></div> -- >
 </body>
 <!-- Alpine Plugins -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js" defer></script> -->
