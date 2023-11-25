@@ -6,6 +6,9 @@ window.App = () => {
         fjalia: Alpine.$persist(''),
 
         get Fjalia() {
+            if (this.fjalite.length == 0) {
+                this.reload()
+            }
             return this.allUppercase ? this.fjalia.toUpperCase() : this.fjalia
         },
 
@@ -19,9 +22,9 @@ window.App = () => {
         },
 
         get newfjalia() {
-            if (this.fjalite.length == 0) {
-                this.reload()
-            }
+            // if (this.fjalite.length == 0) {
+            //     this.reload()
+            // }
             const i = Math.floor(Math.random() * this.fjalite.length)
             this.fjalia = this.fjalite[i]
             return this.fjalia
