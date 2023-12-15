@@ -4,9 +4,7 @@
         "Skeleti e zombi janë shokë të mirë.",
         "Skeleti ka vetëm eshtëra.",
         "Zombi gjuan me hark e shigjetë.",
-        "Skeleti nuk mbath këpucë."
-    ],
-    "l2": [
+        "Skeleti nuk mbath këpucë.",
         "Ma jep shkopin e zi, të lutem!",
         "Unë kam shumë shokë e shoqe.",
         "Në Amerikë ka tornado.",
@@ -60,5 +58,8 @@
         "Kur sëmuhemi mjekja na shkruan barëra.",
         "Mua më pëlqejnë filmat e vizatuar.",
         "Punë, punë, natë e ditë, që të shohim pakëz dritë."
-    ]
+
+    ],
+    "l2": [
+            ]
 }
