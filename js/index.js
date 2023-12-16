@@ -1,6 +1,7 @@
 window.App = () => {
     return {
 
+        ix : -1,
         fjalite: Alpine.$persist([]),
 
         fjalia: Alpine.$persist(''),
@@ -22,8 +23,12 @@ window.App = () => {
         },
 
         get newfjalia() {
-            const i = Math.floor(Math.random() * this.fjalite.length)
-            this.fjalia = this.fjalite[i]
+            if(this.ix == -1){
+                this.ix = Math.floor(Math.random() * this.fjalite.length)
+            }
+            this.ix = (this.ix+1) % this.fjalite.length
+            //const i = Math.floor(Math.random() * this.fjalite.length)
+            this.fjalia = this.fjalite[this.ix]
             return this.fjalia
         },
 
@@ -32,7 +37,7 @@ window.App = () => {
             this.changeFjalia()
         },
 
-        changeFjalia() {
+        changeFjalia() {            
             this.newfjalia
         }
     }
