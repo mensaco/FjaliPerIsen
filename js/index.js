@@ -2,6 +2,9 @@ window.App = () => {
     return {
 
         ix : -1,
+
+        gjuha:Alpine.$persist('sq'),
+
         fjalite: Alpine.$persist([]),
 
         fjalia: Alpine.$persist(''),
@@ -16,7 +19,7 @@ window.App = () => {
         allUppercase: Alpine.$persist(false),
 
         async getfjalite() {
-            const r = await fetch("/json/data.json?r=" + Math.random())
+            const r = await fetch("/json/data."+this.gjuha+".json?r=" + Math.random())
             const j = await r.json()
             this.fjalite = j.l1
             return j.l1
@@ -27,7 +30,6 @@ window.App = () => {
                 this.ix = Math.floor(Math.random() * this.fjalite.length)
             }
             this.ix = (this.ix+1) % this.fjalite.length
-            //const i = Math.floor(Math.random() * this.fjalite.length)
             this.fjalia = this.fjalite[this.ix]
             return this.fjalia
         },
@@ -39,6 +41,17 @@ window.App = () => {
 
         changeFjalia() {            
             this.newfjalia
+        },
+
+        ndërroGjuhen(){
+            const gjuhet = {
+                "sq":"de",
+                "de":"en",
+                "en":"sq"
+            }
+            this.gjuha = gjuhet[this.gjuha]
+            this.reload()
         }
+
     }
 }
