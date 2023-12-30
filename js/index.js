@@ -9,6 +9,20 @@ window.App = () => {
 
         fjalia: Alpine.$persist(''),
 
+        get FontSize() {
+            if(this.fjalia.length > 60){
+                return "text-[4.0vw]"
+            }
+            if(this.fjalia.length > 120){
+                return "text-[3.0vw]"
+            }
+            if(this.fjalia.length > 180){
+                return "text-[2.0vw]"
+            }
+
+            return "text-[5.0vw]"
+        },
+
         get Fjalia() {
             if (this.fjalite.length == 0) {
                 this.reload()
