@@ -20,7 +20,7 @@ window.App = () => {
                 return "text-[2.0vw]"
             }
 
-            return "text-[5.0vw]"
+            return "text-[6.0vw]"
         },
 
         get Fjalia() {
